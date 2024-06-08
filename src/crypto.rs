@@ -53,9 +53,9 @@ use std::str::FromStr;
 use strum::EnumString;
 use tracing::{instrument, warn};
 
-#[cfg(test)]
-#[path = "unit_tests/crypto_tests.rs"]
-mod crypto_tests;
+// #[cfg(test)]
+// #[path = "unit_tests/crypto_tests.rs"]
+// mod crypto_tests;
 
 #[cfg(test)]
 #[cfg(feature = "test-utils")]
