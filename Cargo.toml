@@ -55,9 +55,9 @@ move-command-line-common = { path = "external-crates/move/crates/move-command-li
 move-core-types = { path = "external-crates/move/crates/move-core-types" }
 # move-disassembler = { path = "external-crates/move/crates/move-disassembler" }
 move-ir-types = { path = "external-crates/move/crates/move-ir-types" }
-move-vm-test-utils = { path = "external-crates/move/crates/move-vm-test-utils/", features = [
-    "tiered-gas",
-] }
+# move-vm-test-utils = { path = "external-crates/move/crates/move-vm-test-utils/", features = [
+#     "tiered-gas",
+# ] }
 move-vm-types = { path = "external-crates/move/crates/move-vm-types" }
 move-vm-profiler = { path = "external-crates/move/crates/move-vm-profiler" }
 num-traits = "0.2.18"
@@ -98,16 +98,7 @@ proptest-derive = "0.3.0"
 serde_yaml = "0.8.26"
 expect-test = "1.4.0"
 
-[[bench]]
-name = "accumulator_bench"
-harness = false
-
 [features]
 default = []
 test-utils = []
-gas-profiler = [
-    "move-vm-profiler/gas-profiler",
-    "move-vm-types/gas-profiler",
-    "move-vm-test-utils/gas-profiler",
-]
 fuzzing = ["move-core-types/fuzzing"]
